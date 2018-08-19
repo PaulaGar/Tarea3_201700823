@@ -7,99 +7,102 @@ package ipc.tarea3;
 
 /**
  *
- * @author paula garcía
+ * @author paula
  */
-import javax.swing.JOptionPane;
+import java.util.Scanner;
 public class IPCTarea3 {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-        int opcion, usu, rep, may, prom;
-        do{
-        opcion = Integer.parseInt(JOptionPane.showInputDialog("[IPC]Tarea3_201700823\n1. Usuarios\n2. Contador de digitos repetidos\n3. Tres números de mayor a menor\n4. Calcular promedio\n5. Salir"));
+    int opcion, usuario, repetido, tres, promedio;
+    int numre;
+    Scanner S= new Scanner(System.in);
+  
+    do{
+    System.out.println("1. Usuario");
+    System.out.println("2. Contador de digitos");
+    System.out.println("3. Tres numeros de mayor a menor");
+    System.out.println("4. Calcular promedio");
+    System.out.println("5. Salir");
+    System.out.print("Escoga una opción");
+    opcion= S.nextInt();
+    }while(opcion>5);
+    
+    switch (opcion){
+        case 1: 
+            /*menu usuario*/
+             do{
+        System.out.println("1. Ingresar Usuario");
+        System.out.println("2. Mostrar de forma ascendente");
+        System.out.println("3. Mostrar de forma descendente");
+        System.out.println("4. menú anterior");   
+        System.out.print("Escoga una opción");
+    usuario= S.nextInt();       
+    }while(usuario>4);
+            switch(usuario){
+                case 1:
+                    System.out.println("Ingrese el usuario");
+                    break;
+                case 2:
+                    break;
+                case 3: 
+                    break;
+                case 4:
+ 
+                    break;
+    }
+            break;
         
-        switch(opcion){
+        case 2: /*Menu de numero repetido*/
+            do{
+        System.out.println("1. Ingresar numero");
+        System.out.println("2. ingresar numero a buscar");
+        System.out.println("3. Menu anterior");
+        System.out.print("Escoga una opción");
+    repetido= S.nextInt();       
+    }while(repetido>3|| repetido<0);
             
-            case 1:
-                do{
-                usu = Integer.parseInt(JOptionPane.showInputDialog("Usuarios\n1. Ingresar Usuarios \n2. Mostrar usuarios ascendentes\n3. Mostrar usuarios descendentes\n4. Menú principal"));;
-                switch(usu){
+            switch(repetido){
+                case 1:
+                    System.out.print("Ingrese un numero");
+                    numre=S.nextInt();
                 
-                    case 1:
-                        
-                        break;
-                    case 2:
-                        
-                        break;
-                    case 3:
-                        
-                        break;
-                    case 4:                       
-                        break;
-                }} while (usu !=4);
-               break;   
+                   break;
+                case 2: 
+                    System.out.println("aaaa");
+                    break;
+            }
             
-            case 2:
-                do{
-                rep = Integer.parseInt(JOptionPane.showInputDialog("Contador de digitos repetidos\n1. Ingresar número \n2. Ingresar número a buscar\n3. Mostrar número de digitos\n4. Menú principal"));;
-                switch(rep){
-                
-                    case 1:
-                        
-                        break;
-                    case 2:
-                        
-                        break;
-                    case 3:
-                        
-                        break;
-                    case 4:                       
-                        break;
-                }} while (rep !=4);
-               break; 
-            case 3:
-                 do{
-                may = Integer.parseInt(JOptionPane.showInputDialog("Tres números de mayor a menor\n1. Ingresar números \n2. Mostrar ordenados\n3. Menú principal"));;
-                switch(may){
-                
-                    case 1:
-                        
-                        break;
-                    case 2:
-                        
-                        break;
-                    case 3:
-                        
-                        break;
-                }} while (may !=3);
-               break; 
-            case 4:
-                    do{
-                prom = Integer.parseInt(JOptionPane.showInputDialog("Usuarios\n1. Ingresar Usuarios \n2. Mostrar usuarios ascendentes\n3. Mostrar usuarios descendentes\n4. Menú principal"));;
-                switch(prom){
-                
-                    case 1:
-                        
-                        break;
-                    case 2:
-                        
-                        break;
-                    case 3:
-                        
-                        break;
-                    case 4:                       
-                        break;
-                }} while (prom !=4);
-               break; 
-            case 5:
-               break; 
-               
-               
-        }} while(opcion !=5);
+            break;
         
+        case 3: /*Menu tres numeros*/
+            do{
+        System.out.println("1. Ingresar numeros");
+        System.out.println("2. mostrar ordenados");
+        System.out.println("3. menu anterior");   
+        System.out.print("Escoga una opción");
+    tres= S.nextInt();       
+    }while(tres>4);
+            break;
+        
+        
+       case 4: /*menu promedio*/
+            do{
+        System.out.println("1. Ingresar Usuario");
+        System.out.println("2. Mostrar de forma ascendente");
+        System.out.println("3. Mostrar de forma descendente");
+        System.out.println("4. menú anterior");   
+        System.out.print("Escoga una opción");
+    promedio= S.nextInt();       
+    }while(promedio>4);
+            break; 
+        case 5: /*salir*/
+            break;
+                
+    }
+    
     }
     
 }
